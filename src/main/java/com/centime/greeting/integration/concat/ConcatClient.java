@@ -1,6 +1,6 @@
 package com.centime.greeting.integration.concat;
 
-import com.centime.greeting.model.Person;
+import com.centime.greeting.dto.PersonDTO;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestHeader;
@@ -9,5 +9,5 @@ import org.springframework.web.bind.annotation.RequestHeader;
 public interface ConcatClient {
 
     @PostMapping
-    String concat(@RequestHeader("correlationId") String correlationId, Person person);
+    String concat(@RequestHeader("correlationId") String correlationId, PersonDTO person);
 }

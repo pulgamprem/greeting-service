@@ -1,8 +1,8 @@
 package com.centime.greeting.integration.concat;
 
-import com.centime.greeting.model.Person;
+import com.centime.greeting.dto.PersonDTO;
 
 public interface ConcatService {
 
-    String concat(Person person);
+    String concat(PersonDTO person);
 }

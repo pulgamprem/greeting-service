@@ -1,6 +1,6 @@
 package com.centime.greeting.controller;
 
-import com.centime.greeting.model.Person;
+import com.centime.greeting.dto.PersonDTO;
 import com.centime.greeting.service.GreetingService;
 import com.centime.greeting.util.LogMethodParam;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,7 +28,7 @@ public class GreetingController {
 
     @LogMethodParam
     @PostMapping(path = "/greeting", consumes = "application/json")
-    public ResponseEntity<String> greetPerson(@RequestBody Person person) {
+    public ResponseEntity<String> greetPerson(@RequestBody PersonDTO person) {
         return ResponseEntity.of(Optional.of(greetingService.greetPerson(person)));
     }
 }

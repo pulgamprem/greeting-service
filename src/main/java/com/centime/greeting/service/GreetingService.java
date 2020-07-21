@@ -1,7 +1,7 @@
 package com.centime.greeting.service;
 
-import com.centime.greeting.model.Person;
+import com.centime.greeting.dto.PersonDTO;
 
 public interface GreetingService {
-    public String greetPerson(Person person);
+    public String greetPerson(PersonDTO person);
 }

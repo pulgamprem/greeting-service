@@ -1,7 +1,7 @@
 package com.centime.greeting.integration.concat;
 
 import com.centime.greeting.infrastructure.web.RequestContext;
-import com.centime.greeting.model.Person;
+import com.centime.greeting.dto.PersonDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -14,7 +14,7 @@ public class ConcatServiceImpl implements ConcatService {
     private ConcatClient concatClient;
 
     @Override
-    public String concat(Person person) {
+    public String concat(PersonDTO person) {
         return concatClient.concat(RequestContext.get(CORRELATION_ID_KEY), person);
     }
 }
